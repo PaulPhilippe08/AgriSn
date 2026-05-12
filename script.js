@@ -21,7 +21,7 @@ document.querySelectorAll(".nav-links a").forEach(function (lien) {
 function scrollToSection(id) {
   const section = document.getElementById(id);
   if (section) {
-    const offset = 70; // hauteur navbar
+    const offset = 70; 
     const top = section.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: top, behavior: "smooth" });
   }
@@ -231,7 +231,7 @@ function soumettreFormulaire(event) {
     date: new Date().toLocaleDateString("fr-FR"),
   };
 
-  fetch("https://formspree.io/f/xrejjzjp", {
+  fetch("https://formspree.io/f/mojrrrdo", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(candidature),
