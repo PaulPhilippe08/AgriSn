@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriSn – Opportunités Agricoles pour les Jeunes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">🌱</span>
+          <span class="logo-text">AgriSn</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#accueil" onclick="scrollToSection('accueil')">Accueil</a>
+          </li>
+          <li>
+            <a href="#apropos" onclick="scrollToSection('apropos')">À propos</a>
+          </li>
+          <li>
+            <a href="#programme" onclick="scrollToSection('programme')"
+              >Programme</a
+            >
+          </li>
+          <li>
+            <a href="#regions" onclick="scrollToSection('regions')">Régions</a>
+          </li>
+          <li>
+            <a
+              href="#inscription"
+              class="btn-nav"
+              onclick="scrollToSection('inscription')"
+            >
+              S'inscrire
+            </a>
+          </li>
+        </ul>
+        <button class="burger" id="burger" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <section class="hero" id="accueil">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>
+          AgriSn est une plateforme d'opportunités agricoles<br />dédiée aux
+          jeunes sénégalais de 18 à 35 ans
+        </h1>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="scrollToSection('inscription')">
+            Rejoindre le programme
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('apropos')">
+            En savoir plus
+          </button>
+        </div>
+      </div>
+      <div class="hero-scroll" onclick="scrollToSection('stats')">
+        <span>↓</span>
+      </div>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">Jeunes recrutés par session</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-label">Mois de programme</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Régions couvertes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">% Gratuit (logé, nourri)</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apropos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Notre mission</span>
+          <h2>Pourquoi AgriSn ?</h2>
+          <p>
+            Réduire le chômage des jeunes et développer l'économie du Sénégal à
+            travers l'agriculture, l'élevage et la production locale.
+          </p>
+        </div>
+        <div class="apropos-grid">
+          <div class="apropos-card">
+            <div class="card-icon">🎯</div>
+            <h3>Objectif</h3>
+            <p>
+              Offrir aux jeunes de 18 à 35 ans — étudiants, chômeurs ou sans
+              activité — une opportunité concrète de s'insérer dans le secteur
+              agricole sénégalais.
+            </p>
+          </div>
+          <div class="apropos-card">
+            <div class="card-icon">🧑‍🌾</div>
+            <h3>Formation</h3>
+            <p>
+              Chaque participant est encadré par des agronomes et des experts en
+              agriculture, élevage et production locale tout au long du
+              programme.
+            </p>
+          </div>
+          <div class="apropos-card">
+            <div class="card-icon">💰</div>
+            <h3>Rémunération</h3>
+            <p>
+              Tu es logé, nourri et payé à la fin du programme. Une façon de
+              gagner une expérience et un capital pour démarrer ton propre
+              projet.
+            </p>
+          </div>
+          <div class="apropos-card">
+            <div class="card-icon">🤝</div>
+            <h3>Inclusif</h3>
+            <p>
+              Peu importe ton niveau d'études : lycéen, étudiant en licence,
+              sans diplôme — tout le monde est le bienvenu entre 18 et 35 ans.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="programme">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Étapes</span>
+          <h2>Comment ça marche ?</h2>
+          <p>
+            Un processus simple et transparent, de l'inscription jusqu'au
+            retour.
+          </p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Tu t'inscris en ligne</h3>
+              <p>
+                Remplis le formulaire d'inscription avec tes informations et ta
+                lettre de motivation. C'est gratuit et ouvert à tous les jeunes
+                de 18–35 ans.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Sélection des candidats</h3>
+              <p>
+                Notre équipe sélectionne 50 à 100 jeunes par session selon les
+                disponibilités, la motivation et les besoins du programme.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Départ en région</h3>
+              <p>
+                Les jeunes sélectionnés sont envoyés dans une région agricole
+                (Kaolack, St-Louis, Thiès…) accompagnés d'experts et
+                d'agronomes.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Programme de 2 à 3 mois</h3>
+              <p>
+                Durant le séjour, tu es logé, nourri et formé aux pratiques
+                agricoles. À la fin, tu reçois ta rémunération et ton
+                attestation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="regions">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Destinations</span>
+          <h2>Régions d'accueil</h2>
+          <p>
+            Le programme couvre plusieurs régions à fort potentiel agricole au
+            Sénégal.
+          </p>
+        </div>
+        <div class="regions-grid">
+          <div class="region-card">
+            <div class="region-img" style="background-color: #c8e6c9">
+              <span class="region-emoji">🌾</span>
+            </div>
+            <div class="region-info">
+              <h3>Kaolack</h3>
+              <p>
+                Capitale de l'arachide. Idéale pour apprendre la culture
+                céréalière et l'agroalimentaire.
+              </p>
+              <div class="region-tags">
+                <span class="tag">Agriculture</span>
+                <span class="tag">Arachide</span>
+              </div>
+            </div>
+          </div>
+          <div class="region-card">
+            <div class="region-img" style="background-color: #b3e5fc">
+              <span class="region-emoji">🐟</span>
+            </div>
+            <div class="region-info">
+              <h3>Saint-Louis</h3>
+              <p>
+                Région du nord, spécialisée dans la riziculture du fleuve
+                Sénégal et la pêche artisanale.
+              </p>
+              <div class="region-tags">
+                <span class="tag">Riziculture</span>
+                <span class="tag">Élevage</span>
+              </div>
+            </div>
+          </div>
+          <div class="region-card">
+            <div class="region-img" style="background-color: #ffe0b2">
+              <span class="region-emoji">🥭</span>
+            </div>
+            <div class="region-info">
+              <h3>Thiès</h3>
+              <p>
+                Zone maraîchère et fruitière. Formation en horticulture et
+                production locale.
+              </p>
+              <div class="region-tags">
+                <span class="tag">Maraîchage</span>
+                <span class="tag">Fruits</span>
+              </div>
+            </div>
+          </div>
+          <div class="region-card">
+            <div class="region-img" style="background-color: #f3e5f5">
+              <span class="region-emoji">🐄</span>
+            </div>
+            <div class="region-info">
+              <h3>Tambacounda</h3>
+              <p>
+                Grand sud agricole, propice à l'élevage extensif et aux cultures
+                vivrières.
+              </p>
+              <div class="region-tags">
+                <span class="tag">Élevage</span>
+                <span class="tag">Vivriers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="inscription">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Candidature</span>
+          <h2>S'inscrire au programme</h2>
+          <p>
+            Remplis le formulaire ci-dessous. Notre équipe vous contactera dans
+            les jours à venir.
+          </p>
+        </div>
+
+        <div class="success-message hidden" id="successMsg">
+          <div class="success-icon">✅</div>
+          <h3>Candidature envoyée !</h3>
+          <p>
+            Merci <strong id="prenomCandidat"></strong> ! Nous avons bien reçu
+            votre candidature. Notre équipe vous contactera sous 7 jours
+            ouvrables.
+          </p>
+          <button class="btn-primary" onclick="resetForm()">
+            Soumettre une autre candidature
+          </button>
+        </div>
+
+        <form
+          class="inscription-form"
+          id="inscriptionForm"
+          onsubmit="soumettreFormulaire(event)"
+          novalidate
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom <span class="required">*</span></label>
+              <input
+                type="text"
+                id="nom"
+                placeholder="Ton nom de famille"
+                required
+              />
+              <span class="error-msg" id="err-nom"></span>
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom <span class="required">*</span></label>
+              <input
+                type="text"
+                id="prenom"
+                placeholder="Ton prénom"
+                required
+              />
+              <span class="error-msg" id="err-prenom"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="age">Âge <span class="required">*</span></label>
+              <input
+                type="number"
+                id="age"
+                placeholder="Entre 18 et 35 ans"
+                min="18"
+                max="35"
+                required
+              />
+              <span class="error-msg" id="err-age"></span>
+            </div>
+            <div class="form-group">
+              <label for="genre">Genre <span class="required">*</span></label>
+              <select id="genre" required>
+                <option value="">-- Sélectionner --</option>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+                <option value="autre">Autre</option>
+              </select>
+              <span class="error-msg" id="err-genre"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                placeholder="ton.email@exemple.com"
+                required
+              />
+              <span class="error-msg" id="err-email"></span>
+            </div>
+            <div class="form-group">
+              <label for="telephone"
+                >Téléphone <span class="required">*</span></label
+              >
+              <input
+                type="tel"
+                id="telephone"
+                placeholder="77 000 00 00"
+                required
+              />
+              <span class="error-msg" id="err-telephone"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="statut"
+                >Statut actuel <span class="required">*</span></label
+              >
+              <select id="statut" required>
+                <option value="">-- Sélectionner --</option>
+                <option value="etudiant">Étudiant(e)</option>
+                <option value="chomeur">Sans emploi</option>
+                <option value="travailleur">Travailleur(se)</option>
+                <option value="autre">Autre</option>
+              </select>
+              <span class="error-msg" id="err-statut"></span>
+            </div>
+            <div class="form-group">
+              <label for="region-origine"
+                >Région d'origine <span class="required">*</span></label
+              >
+              <select id="region-origine" required>
+                <option value="">-- Sélectionner --</option>
+                <option>Dakar</option>
+                <option>Thiès</option>
+                <option>Saint-Louis</option>
+                <option>Kaolack</option>
+                <option>Ziguinchor</option>
+                <option>Tambacounda</option>
+                <option>Diourbel</option>
+                <option>Fatick</option>
+                <option>Louga</option>
+                <option>Matam</option>
+                <option>Kolda</option>
+                <option>Kaffrine</option>
+                <option>Kédougou</option>
+                <option>Sédhiou</option>
+              </select>
+              <span class="error-msg" id="err-region-origine"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="region-souhaitee"
+                >Région souhaitée pour le programme</label
+              >
+              <select id="region-souhaitee">
+                <option value="">-- Pas de préférence --</option>
+                <option>Kaolack</option>
+                <option>Saint-Louis</option>
+                <option>Thiès</option>
+                <option>Tambacounda</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="domaine"
+                >Domaine d'intérêt <span class="required">*</span></label
+              >
+              <select id="domaine" required>
+                <option value="">-- Sélectionner --</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="elevage">Élevage</option>
+                <option value="production">Production locale</option>
+                <option value="mixte">Tous les domaines</option>
+              </select>
+              <span class="error-msg" id="err-domaine"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="disponibilite"
+                >Durée de disponibilité <span class="required">*</span></label
+              >
+              <select id="disponibilite" required>
+                <option value="">-- Sélectionner --</option>
+                <option value="2mois">2 mois</option>
+                <option value="3mois">3 mois</option>
+              </select>
+              <span class="error-msg" id="err-disponibilite"></span>
+            </div>
+            <div class="form-group">
+              <label for="niveau">Niveau d'études</label>
+              <select id="niveau">
+                <option value="">-- Sélectionner --</option>
+                <option>Aucun diplôme</option>
+                <option>BFEM / Brevet</option>
+                <option>Baccalauréat</option>
+                <option>Licence (en cours)</option>
+                <option>Licence (obtenue)</option>
+                <option>Master ou plus</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="motivation"
+              >Lettre de motivation <span class="required">*</span></label
+            >
+            <textarea
+              id="motivation"
+              rows="5"
+              placeholder="Pourquoi veux-tu rejoindre le programme AgriSn ? Quelles sont tes ambitions ? (minimum 50 caractères)"
+              required
+            ></textarea>
+            <span class="char-count" id="charCount"
+              >0 / 50 caractères minimum</span
+            >
+            <span class="error-msg" id="err-motivation"></span>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="checkbox-label">
+              <input type="checkbox" id="conditions" required />
+              <span
+                >J'accepte les
+                <a href="#" onclick="return false;">conditions d'utilisation</a>
+                et je certifie avoir entre 18 et 35 ans.</span
+              >
+            </label>
+            <span class="error-msg" id="err-conditions"></span>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" onclick="resetForm()">
+              Réinitialiser
+            </button>
+            <button type="submit" class="btn-primary" id="submitBtn">
+              <span id="btnText">Envoyer ma candidature</span>
+              <span id="btnLoader" class="hidden">⏳ Envoi en cours...</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🌱</span>
+            <span class="logo-text">AgriSn</span>
+          </div>
+          <p>
+            Plateforme d'opportunités agricoles pour les jeunes sénégalais de 18
+            à 35 ans.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  scrollToSection('accueil');
+                  return false;
+                "
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  scrollToSection('apropos');
+                  return false;
+                "
+                >À propos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  scrollToSection('programme');
+                  return false;
+                "
+                >Programme</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  scrollToSection('inscription');
+                  return false;
+                "
+                >S'inscrire</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li>📧 contact@agrisn.sn</li>
+            <li>📞 +221 77 000 00 00</li>
+            <li>📍 Dakar, Sénégal</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 AgriSn
+          <span class="heartbeat" aria-label="coeur battant">❤</span> |
+          Hackathon AFI L'UE | Tous droits réservés
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast hidden" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
