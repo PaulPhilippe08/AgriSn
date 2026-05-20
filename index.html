@@ -10,6 +10,7 @@
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>"
     />
   </head>
+
   <body>
     <nav class="navbar" id="navbar">
       <div class="nav-container">
@@ -590,5 +591,47 @@
     <div class="toast hidden" id="toast"></div>
 
     <script src="script.js"></script>
+
+    <div class="chat-window hidden" id="chatWindow">
+      <div class="chat-header">
+        <div class="chat-avatar">🌱</div>
+        <div class="chat-header-info">
+          <p>Assistant AgriSn</p>
+          <span>Conseiller agricole IA</span>
+        </div>
+        <button class="chat-close" onclick="toggleChat()">✕</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg bot">
+          Salut ! Je suis l'assistant AgriSn 🌾 Je peux t'aider à choisir un
+          secteur agricole, comprendre le programme, ou répondre à tes
+          questions. Par où veux-tu commencer ?
+        </div>
+      </div>
+      <div class="chat-suggestions" id="chips">
+        <button class="chip" onclick="sendChip('Quel secteur me correspond ?')">
+          Quel secteur me correspond ?
+        </button>
+        <button
+          class="chip"
+          onclick="sendChip('Comment fonctionne le programme ?')"
+        >
+          Comment ça marche ?
+        </button>
+        <button class="chip" onclick="sendChip('Quelle région choisir ?')">
+          Quelle région ?
+        </button>
+      </div>
+      <div class="chat-input-row">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Écris ta question…"
+          onkeydown="if (event.key === 'Enter') sendMessage();"
+        />
+        <button class="chat-send" onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+    <button class="chat-fab" onclick="toggleChat()" id="chatFab">💬</button>
   </body>
 </html>
